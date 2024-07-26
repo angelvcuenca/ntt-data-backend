@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: api-account-transactions
+  config:
+    import: optional:configserver:http://localhost:8888

@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: api-client-person
+  config:
+    import: optional:configserver:http://localhost:8888

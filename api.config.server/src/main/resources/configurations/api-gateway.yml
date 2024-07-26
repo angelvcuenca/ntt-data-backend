@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: clients
+          uri: 'http://localhost:8090'
+          predicates:
+            - Path=/clientes/**
+        - id: transactions
+          uri: 'http://localhost:8091'
+          predicates:
+            - Path=/cuentas/**
+            - Path=/movimientos/**
+            - Path=/reportes/**
+
+eureka:
+  client:
+    register-with-eureka: false

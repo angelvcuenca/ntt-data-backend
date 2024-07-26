@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="api-gateway" />
+        <module name="api.client.person" />
+        <module name="api-eureka" />
+        <module name="api.config.server" />
+        <module name="api.account.transactions" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api-eureka" options="-parameters" />
+      <module name="api-gateway" options="-parameters" />
+      <module name="api.account.transactions" options="-parameters" />
+      <module name="api.client.person" options="-parameters" />
+      <module name="api.config.server" options="-parameters" />
+    </option>
+  </component>
+</project>
